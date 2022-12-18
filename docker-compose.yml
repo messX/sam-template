@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  web:
+    container_name: "sam-test"
+    image: "sam-image-${NODE_ENV}"
+    environment:
+      - NODE_ENV:${NODE_ENV}
+    build: .
+    ports:
+      - "3000:3000"
